@@ -1,6 +1,6 @@
 import cors from 'cors'
 import express, { Application } from 'express'
-import { apiRoutes, userRoutes } from '../routes'
+import { apiRoutes, errorRoutes, userRoutes } from '../routes'
 
 class Server {
   private app: Application
@@ -9,6 +9,7 @@ class Server {
 
   private apiPaths = {
     api: '/api',
+    error: '/*',
     users: '/api/users'
   }
 
@@ -31,6 +32,7 @@ class Server {
   routes() {
     this.app.use(this.apiPaths.api, apiRoutes)
     this.app.use(this.apiPaths.users, userRoutes)
+    this.app.use(this.apiPaths.error, errorRoutes)
   }
 
   listen() {
