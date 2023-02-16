@@ -1,6 +1,6 @@
 import cors from 'cors'
 import express, { Application } from 'express'
-import userRoutes from '../routes/users.routes'
+import { apiRoutes, userRoutes } from '../routes'
 
 class Server {
   private app: Application
@@ -8,6 +8,7 @@ class Server {
   private port: string
 
   private apiPaths = {
+    api: '/api',
     users: '/api/users'
   }
 
@@ -28,6 +29,7 @@ class Server {
   }
 
   routes() {
+    this.app.use(this.apiPaths.api, apiRoutes)
     this.app.use(this.apiPaths.users, userRoutes)
   }
 

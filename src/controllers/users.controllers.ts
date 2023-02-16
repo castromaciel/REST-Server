@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 
 export const getUsers = (req: Request, res: Response) => {
-  res.json({
+  res.status(201).json({
     message: 'getUsers'
   })
 }
@@ -9,7 +9,7 @@ export const getUsers = (req: Request, res: Response) => {
 export const getUser = (req: Request, res: Response) => {
   const { id } = req.params
 
-  res.json({
+  res.status(201).json({
     id,
     message: 'getUser'
   })
@@ -18,7 +18,7 @@ export const getUser = (req: Request, res: Response) => {
 export const postUser = (req: Request, res: Response) => {
   const { body } = req
 
-  res.json({
+  res.status(201).json({
     body,
     message: 'postUser'
   })
