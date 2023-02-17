@@ -6,7 +6,8 @@ const router = Router()
 
 const getApis = (req: Request, res: Response) => {
   res.json({
-    message: 'Apis'
+    movies: 'movies',
+    ecommerce: 'e-commerce'
   })
 }
 
