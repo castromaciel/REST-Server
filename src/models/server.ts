@@ -1,7 +1,7 @@
 import cors from 'cors'
 import express, { Application } from 'express'
 import {
-  apiRoutes, ecommerceRoutes, errorRoutes, userRoutes
+  apiRoutes, ecommerceRoutes, errorRoutes, moviesRoutes, userRoutes
 } from '../routes'
 
 class Server {
@@ -13,6 +13,7 @@ class Server {
     api: '/api',
     error: '/*',
     ecommerce: '/api/e-commerce',
+    movies: '/api/movies',
     users: '/api/users'
   }
 
@@ -35,6 +36,7 @@ class Server {
   routes() {
     this.app.use(this.apiPaths.api, apiRoutes)
     this.app.use(this.apiPaths.ecommerce, ecommerceRoutes)
+    this.app.use(this.apiPaths.movies, moviesRoutes)
     this.app.use(this.apiPaths.users, userRoutes)
     this.app.use(this.apiPaths.error, errorRoutes)
   }
