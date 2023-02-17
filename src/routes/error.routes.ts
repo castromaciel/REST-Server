@@ -5,9 +5,7 @@ import {
 const router = Router()
 
 const getError = (req: Request, res: Response) => {
-  res.status(404).json({
-    message: 'Error: not found'
-  })
+  res.sendFile('error/index.html', { root: 'public' })
 }
 
 router.get('/', getError)

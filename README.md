@@ -1,5 +1,5 @@
 <h1 align="center">
-Template: Node + Express + TypeScript
+REST Server
 </h1>
 
 <div align="center">
@@ -8,29 +8,11 @@ Template: Node + Express + TypeScript
 
 </div>
 
-## Usage
-
-### Use Template button
-Click the `Use this template` button above the file list, then use the Owner drop-down menu, and select the account you want to own the repository. Creating a repository from a template has the following advantages:
-
-A repository created from a template starts with a single commit.
-Commits to a repository created from a template do appear in your contribution graph.
-Creating a repository from a template starts a new project quickly.
-
-
 ## Development
 
 To get a local copy, clone it using:
 ```
-git clone https://github.com/castromaciel/template-node-express-ts.git
-```
-
-### Make it your own
-
-```
-rm -rf .git && git init
-git add .
-git commit -m "Initial commit"
+git clone https://github.com/castromaciel/REST-Server.git
 ```
 
 ### Install dependencies:
@@ -64,15 +46,17 @@ In this project, you can run the following scripts:
 ```
 template-node-express-ts
 ├── dist
+    ├── src
     ├── app.js
 ├── node_modules
 ├── public
+│   └── error
 │   └── index.html
 └── src
     ├── controllers
     ├── middlewares
-        ├── server.ts
     ├── models
+        ├── server.ts
     ├── routes
 ├── .env.example
 ├── .eslintignore
