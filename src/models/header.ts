@@ -3,7 +3,6 @@ type SeverityType = | 'success' | 'error'
 interface HeaderParams {
   message: string
   status: SeverityType
-  timestamp: string
 }
 
 export class HeaderData {
@@ -14,10 +13,10 @@ export class HeaderData {
   timestamp: string
 
   constructor({
-    message, timestamp, status
+    message, status
   }: HeaderParams) {
     this.status = status
     this.message = message
-    this.timestamp = timestamp
+    this.timestamp = new Date().toISOString()
   }
 }

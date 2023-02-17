@@ -4,8 +4,7 @@ import {
 import { HeaderData } from '../models/header'
 
 export const getProducts = (req: Request, res: Response) => {
-  const timestamp = new Date().toISOString()
-  const headers = new HeaderData({ timestamp, status: 'success', message: 'Products retrieved successfully' })
+  const headers = new HeaderData({ status: 'success', message: 'Products retrieved successfully' })
 
   res.status(200).send({
     headers,
