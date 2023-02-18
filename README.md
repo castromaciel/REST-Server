@@ -8,6 +8,12 @@ REST Server
 
 </div>
 
+## About this application
+
+The API arose for didactic purposes. The general idea is to have several APIs centralized from which information on products, movies, can be obtained.
+
+The deployment is done at [renderer](https://render.com/docs), with the free plan. So the requests, build of the project are limited.
+
 ## Development
 
 To get a local copy, clone it using:
@@ -40,6 +46,7 @@ In this project, you can run the following scripts:
 - [cors](https://github.com/expressjs/cors#readme) for providing a Connect/Express middleware.
 - [dotenv](https://github.com/motdotla/dotenv#readme) loads environment variables from a .env file into process.env.
 - [express](https://expressjs.com/) framework for Node.js.
+- [mongoose](https://mongoosejs.com/) mongodb object modeling for node.js.
 
 ## Folder Structure
 
@@ -54,11 +61,10 @@ template-node-express-ts
 │   └── index.html
 └── src
     ├── controllers
-    ├── middlewares
+    ├── database
     ├── models
         ├── server.ts
     ├── routes
-├── .env.example
 ├── .eslintignore
 ├── .eslintrc.json
 ├── .gitignore
@@ -75,4 +81,4 @@ For coding styling, I decided to use [eslint](https://eslint.org/) and the [esli
 
 ## Credits
 
-Node-TS with Express is built and maintained by [Castro Maciel](https://github.com/castromaciel)
+Rest Server with Express is built and maintained by [Castro Maciel](https://github.com/castromaciel)
