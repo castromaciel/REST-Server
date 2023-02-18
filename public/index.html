@@ -24,14 +24,20 @@
 
     <section>
       <h2>Usage</h2>
-      <h3>Get all products</h3>
+      <div class="block-code">
+        <span class="badge">GET</span>
+        <h3>All products</h3>
+      </div>
       <pre>
         <code>
-fetch('https:.../api/e-commerce')
-  .then(response => response.json())
-  .then(json => console.log(json))
+fetch(<span class="code-api">'https://api-rest-server-collection.onrender.com/api/e-commerce'</span>)
+  .then(res =&gt; res.json())
+  .then(json =&gt; console.log(json))
         </code>
       </pre>
+      <footer>
+        <p>Learn more about this <a href="/">here</a>.</p>
+      </footer>
     </section>
 
   </main>

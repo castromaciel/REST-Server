@@ -49,28 +49,71 @@ ul {
   flex-direction: column;
 }
 
-ul li a,
-ul li {
+a {
   all: unset;
 }
 
-ul li a:hover {
+a:hover {
   cursor: pointer;
   transition: 0.2s;
   color: var(--color-purple);
 }
 
+ul li {
+  all: unset;
+}
+
+.block-code {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 pre code {
   border-radius: 4px;
-  width: 400px;
   padding: 0rem 2rem;
   background-color: var(--color-dark-grey);
   font-size: 14px;
   display: block;
+  overflow-x: scroll;
+}
+
+.code-api {
+  color: var(--color-purple);
+}
+
+.badge {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+footer p a {
+  all: unset;
+  font-weight: bold;
+}
+
+footer p a:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  color: var(--color-purple);
 }
 
 @media only screen and (min-width: 768px) {
   main {
     padding: 1rem 4rem;
   }
+
+  pre code {
+    max-width: 768px;
+    border-radius: 4px;
+    padding: 0rem 2rem;
+    background-color: var(--color-dark-grey);
+    font-size: 14px;
+    display: block;
+    overflow-x: auto;
+  }
+
 }
