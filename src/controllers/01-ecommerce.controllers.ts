@@ -14,11 +14,22 @@ export const getProducts = async (req: Request, res: Response) => {
   })
 }
 
-export const getProduct = (req: Request, res: Response) => {
+export const getProduct = async (req: Request, res: Response) => {
   const { id } = req.params
-  const headers = new HeaderData({ status: 'success', message: `Products with id ${id} retrieved successfully` })
+  if (!id.match(/^[0-9a-fA-F]{24}$/)) {
+    const headers = new HeaderData({ status: 'error', message: 'ObjectId is not valid' })
 
-  res.status(200).send({
-    headers
+    return res.status(404).send({
+      headers,
+      data: []
+    })
+  }
+
+  const product = await Product.findById({ _id: id })
+  const headers = new HeaderData({ status: 'success', message: `Product with id ${id} retrieved successfully` })
+
+  return res.status(200).send({
+    headers,
+    product
   })
 }
