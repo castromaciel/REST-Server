@@ -10,19 +10,33 @@ interface IProduct {
   title: string
   description: string
   comments: Comment []
+  price: number
   previewImage: string
   otherImages: string
 }
 
 const ProductSchema = new Schema<IProduct>({
-  title: String,
-  description: String,
+  title: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
   comments: [{
     author: String,
     comment: String,
     date: Date
   }],
-  previewImage: String,
+  price: {
+    type: Number,
+    required: true
+  },
+  previewImage: {
+    type: String,
+    required: true
+  },
   otherImages: String
 })
 

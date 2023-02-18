@@ -2,19 +2,15 @@ import {
   Request, Response
 } from 'express'
 import { HeaderData } from '../models/Header'
+import { Product } from '../models/Products'
 
-export const getProducts = (req: Request, res: Response) => {
+export const getProducts = async (req: Request, res: Response) => {
+  const products = await Product.find({ })
   const headers = new HeaderData({ status: 'success', message: 'Products retrieved successfully' })
 
   res.status(200).send({
     headers,
-    data: [
-      {
-        id: 1,
-        title: 'Product',
-        description: 'Lorem Ipsum dolor sit amet, consectetur adipiscing elit'
-      }
-    ]
+    data: products
   })
 }
 
