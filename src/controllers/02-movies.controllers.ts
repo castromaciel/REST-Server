@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { HeaderData } from '../models/Header'
+import { HeaderData } from '../models/header'
 
 export const getMovies = (req: Request, res: Response) => {
   const headers = new HeaderData({ status: 'success', message: 'Movies retrieved successfully' })

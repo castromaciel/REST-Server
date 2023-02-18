@@ -1,7 +1,7 @@
 import {
   Request, Response
 } from 'express'
-import { HeaderData } from '../models/Header'
+import { HeaderData } from '../models/header'
 import { Product } from '../models/Products'
 
 export const getProducts = async (req: Request, res: Response) => {
