@@ -8,7 +8,7 @@
     "build": "tsc",
     "tsc:watch": "tsc --watch",
     "start": "tsc && node dist/app.js",
-    "start:render":"node dist/app.js",
+    "start:render": "node dist/app.js",
     "dev": "tsc && nodemon dist/app.js",
     "format": "eslint src/**/*.ts --fix"
   },
@@ -34,6 +34,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "helmet": "^6.0.1",
     "mongoose": "^6.9.2"
   }
 }

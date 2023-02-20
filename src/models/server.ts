@@ -1,5 +1,6 @@
 import cors from 'cors'
 import express, { Application } from 'express'
+import helmet from 'helmet'
 import { dbConnection } from '../database/config'
 import {
   apiRoutes, ecommerceRoutes, errorRoutes, moviesRoutes, userRoutes
@@ -32,6 +33,8 @@ class Server {
   }
 
   middlewares() {
+    this.app.use(helmet())
+
     this.app.use(cors())
 
     this.app.use(express.json())
