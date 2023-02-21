@@ -1,5 +1,5 @@
 <h1 align="center">
-REST Server
+APIs collection
 </h1>
 
 <div align="center">
@@ -16,7 +16,7 @@ The deployment is done at [renderer](https://render.com/docs), with the free pla
 
 To get a local copy, clone it using:
 ```
-git clone https://github.com/castromaciel/REST-Server.git
+git clone https://github.com/castromaciel/APIs-collection.git
 ```
 
 ### Install dependencies:
@@ -51,7 +51,7 @@ In this project, you can run the following scripts:
 ## Folder Structure
 
 ```
-template-node-express-ts
+apis-collection
 ├── dist
     ├── src
     ├── app.js
@@ -82,7 +82,7 @@ For coding styling, I decided to use [eslint](https://eslint.org/) and the [esli
 
 ## Credits
 
-Rest Server with Express is built and maintained by [Castro Maciel](https://github.com/castromaciel)
+APIs collection is built and maintained by [Castro Maciel](https://github.com/castromaciel)
 
 ## License
 
