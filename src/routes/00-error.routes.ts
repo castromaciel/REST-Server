@@ -1,12 +1,7 @@
-import {
-  Request, Response, Router
-} from 'express'
+import { Router } from 'express'
+import { getError } from '../controllers/00-error.controllers'
 
 const router = Router()
-
-const getError = (req: Request, res: Response) => {
-  res.sendFile('error/index.html', { root: 'public' })
-}
 
 router.get('/', getError)
 
