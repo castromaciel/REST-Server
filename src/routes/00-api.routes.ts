@@ -1,15 +1,7 @@
-import {
-  Request, Response, Router
-} from 'express'
+import { Router } from 'express'
+import { getApis } from '../controllers/00-api.controllers'
 
 const router = Router()
-
-const getApis = (req: Request, res: Response) => {
-  res.json({
-    movies: 'movies',
-    ecommerce: 'e-commerce'
-  })
-}
 
 router.get('/', getApis)
 
