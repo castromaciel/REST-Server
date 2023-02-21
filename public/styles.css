@@ -21,6 +21,13 @@ body {
   color: var(--color-white);
 }
 
+.error-page {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
 header {
   text-align: center;
   margin-top: 1rem;
