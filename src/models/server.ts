@@ -3,7 +3,7 @@ import express, { Application } from 'express'
 import helmet from 'helmet'
 import { dbConnection } from '../database/config'
 import {
-  apiRoutes, ecommerceRoutes, errorRoutes, moviesRoutes, userRoutes
+  apiRoutes, ecommerceRoutes, errorRoutes, moviesRoutes
 } from '../routes'
 
 class Server {
@@ -46,7 +46,6 @@ class Server {
     this.app.use(this.apiPaths.api, apiRoutes)
     this.app.use(this.apiPaths.ecommerce, ecommerceRoutes)
     this.app.use(this.apiPaths.movies, moviesRoutes)
-    this.app.use(this.apiPaths.users, userRoutes)
     this.app.use(this.apiPaths.error, errorRoutes)
   }
 
