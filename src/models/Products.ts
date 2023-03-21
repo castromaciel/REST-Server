@@ -40,4 +40,12 @@ const ProductSchema = new Schema<IProduct>({
   otherImages: String
 })
 
+ProductSchema.methods.toJSON = function () {
+  const {
+    __v, _id, ...product
+  } = this.toObject()
+  product.id = _id
+  return product
+}
+
 export const Product = model<IProduct>('Product', ProductSchema)
