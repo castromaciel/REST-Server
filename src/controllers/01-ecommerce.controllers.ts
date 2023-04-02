@@ -21,7 +21,7 @@ export const getProducts = async (req: Request, res: Response) => {
       data: products
     })
   } catch (error) {
-    const headers = new HeaderData({ status: STATUS.error, message: 'Failed to fethc products' })
+    const headers = new HeaderData({ status: STATUS.error, message: 'Failed to fetch products' })
 
     res.status(400).send({
       headers,
