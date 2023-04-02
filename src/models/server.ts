@@ -1,7 +1,7 @@
 import cors from 'cors'
 import express, { Application } from 'express'
 import helmet from 'helmet'
-import { apiPaths } from 'src/constants'
+import { apiPaths } from '../constants/index'
 import { dbConnection } from '../database/config'
 import {
   apiRoutes, ecommerceRoutes, errorRoutes, moviesRoutes
