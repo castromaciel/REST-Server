@@ -4,3 +4,11 @@ export const STATUS = Object.freeze({
   info: 'info',
   warn: 'warn'
 })
+
+export const apiPaths = {
+  api: '/api',
+  error: '/*',
+  ecommerce: '/api/e-commerce',
+  movies: '/api/movies',
+  users: '/api/users'
+}

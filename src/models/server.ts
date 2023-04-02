@@ -1,6 +1,7 @@
 import cors from 'cors'
 import express, { Application } from 'express'
 import helmet from 'helmet'
+import { apiPaths } from 'src/constants'
 import { dbConnection } from '../database/config'
 import {
   apiRoutes, ecommerceRoutes, errorRoutes, moviesRoutes
@@ -11,13 +12,7 @@ class Server {
 
   private port: string
 
-  private apiPaths = {
-    api: '/api',
-    error: '/*',
-    ecommerce: '/api/e-commerce',
-    movies: '/api/movies',
-    users: '/api/users'
-  }
+  private apiPaths = apiPaths
 
   constructor() {
     this.app = express()
