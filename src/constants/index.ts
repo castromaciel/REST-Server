@@ -5,7 +5,7 @@ export const STATUS = Object.freeze({
   warn: 'warn'
 })
 
-export const apiPaths = {
+export const PATHS = {
   api: '/api',
   error: '/*',
   ecommerce: '/api/e-commerce',
