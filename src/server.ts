@@ -1,11 +1,11 @@
 import cors from 'cors'
 import express, { Application } from 'express'
 import helmet from 'helmet'
-import { PATHS } from '../constants/index'
-import { dbConnection } from '../database/config'
+import { PATHS } from './constants/index'
+import { dbConnection } from './database/config'
 import {
   apiRoutes, ecommerceRoutes, errorRoutes, moviesRoutes
-} from '../routes'
+} from './routes'
 
 class Server {
   private app: Application
@@ -29,11 +29,8 @@ class Server {
 
   middlewares() {
     this.app.use(helmet())
-
     this.app.use(cors())
-
     this.app.use(express.json())
-
     this.app.use(express.static('public'))
   }
 
